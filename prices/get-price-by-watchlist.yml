@@ -1,0 +1,19 @@
+info:
+  name: get-price-by-watchlist
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{base_url}}/api/prices/watchlist?stock_ids=3,64"
+  params:
+    - name: stock_ids
+      value: 3,64
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

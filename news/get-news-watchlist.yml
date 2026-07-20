@@ -1,0 +1,25 @@
+info:
+  name: get-news-watchlist
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{base_url}}/api/news/watchlist?stock_ids=92&page=1&limit=10"
+  params:
+    - name: stock_ids
+      value: "92"
+      type: query
+    - name: page
+      value: "1"
+      type: query
+    - name: limit
+      value: "10"
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
