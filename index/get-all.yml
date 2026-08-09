@@ -1,0 +1,33 @@
+info:
+  name: get-all
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{base_url}}/api/index?page=1&sort=popularity&order=desc"
+  params:
+    - name: page
+      value: "1"
+      type: query
+    - name: sort
+      value: popularity
+      type: query
+    - name: order
+      value: desc
+      type: query
+    - name: search
+      value: bank
+      type: query
+      disabled: true
+    - name: limit
+      value: "100"
+      type: query
+      disabled: true
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
