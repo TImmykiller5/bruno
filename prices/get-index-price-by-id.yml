@@ -5,13 +5,13 @@ info:
 
 http:
   method: GET
-  url: "{{base_url}}/api/prices/:stock_id?range=1m"
+  url: "{{base_url}}/api/prices/index/:index_id?range=1m"
   params:
     - name: range
       value: 1m
       type: query
-    - name: stock_id
-      value: "21"
+    - name: index_id
+      value: "1"
       type: path
   auth: inherit
 
